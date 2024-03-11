@@ -25,19 +25,19 @@
 #   end
 # end
 
-compile '/**/*.haml' do
+compile "/**/*.haml" do
   filter :haml
-  layout '/default.*'
-  write item.identifier.without_ext + '.html'
+  layout "/default.*"
+  write item.identifier.without_ext + ".html"
 end
 
-compile '/**/stylesheets/*.scss' do
-  next if item.identifier.to_s.split("/").last =~ /^_/ # pass partials nested in folders
+compile "/**/stylesheets/*.scss" do
+  next if /^_/.match?(item.identifier.to_s.split("/").last) # pass partials nested in folders
 
   filter :sass, syntax: :scss
   write item.identifier.without_ext
 end
 
-passthrough '/**/*'
+passthrough "/**/*"
 
-layout '/**/*', :haml, format: :html5
+layout "/**/*", :haml, format: :html5

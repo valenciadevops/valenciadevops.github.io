@@ -3,10 +3,10 @@ require "yaml"
 use_helper Nanoc::Helpers::Rendering
 
 def is_page_selected(page)
-  @item.identifier.without_ext == page ? "selected" : ""
+  (@item.identifier.without_ext == page) ? "selected" : ""
 end
 
-class Data
+class YamlData
   def method_missing(method_name, *arguments, &block)
     YAML.safe_load_file(File.join(File.expand_path("..", __dir__), "data", "#{method_name}.yml"), symbolize_names: true)
   end
@@ -18,5 +18,5 @@ class Data
 end
 
 def data
-  Data.new
+  YamlData.new
 end

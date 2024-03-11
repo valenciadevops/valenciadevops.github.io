@@ -19,7 +19,7 @@ title: Los eventos anteriores
     %section{:class => "#{m[:type]}"}
       - m[:talks].each do |f|
         %article
-          %h3= f[:title]
+          %h3!= f[:title]
           - f[:author].each do |t|
             %p
               = t[:name]
