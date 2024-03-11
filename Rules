@@ -35,6 +35,7 @@ compile "/**/stylesheets/*.scss" do
   next if /^_/.match?(item.identifier.to_s.split("/").last) # pass partials nested in folders
 
   filter :sass, syntax: :scss
+  filter :rainpress
   write item.identifier.without_ext
 end
 

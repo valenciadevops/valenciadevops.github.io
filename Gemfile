@@ -2,9 +2,10 @@
 
 source "https://rubygems.org"
 
-gem "nanoc", "~> 4.12"
 gem "adsf", "~> 1.4"
 gem "haml", "~> 6.3"
+gem "nanoc", "~> 4.12"
+gem "rainpress", "~> 1.0"
 gem "sass", "~> 3.7"
 
 group :development do
