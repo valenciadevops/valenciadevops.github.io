@@ -1,0 +1,23 @@
+%footer
+  .fgroup
+    .first
+      %h3= data.static[:participate]
+      %p
+        =data.static[:participate_how]
+        %a{href: "mailto:#{data.static[:participate_email]}"} #{data.static[:participate_email]}
+
+    .middle
+      %h3= data.static[:follow]
+      %p
+        %a{href: data.static[:twitter_url], title: "#{data.static[:twitter_account]} on Twitter", target: "_blank"} #{data.static[:twitter_account]}
+      %p
+        %a{href: "https://twitter.com/search?q=%23#{data.static[:twitter_hashtag]}", title: "Hashtag ##{data.static[:twitter_hashtag]}", target: "_blank"} ##{data.static[:twitter_hashtag]}
+      %p
+        %a{href: "https://www.youtube.com/@#{data.static[:twitter_account]}", title: "Youtube channel", target: "_blank"} #{data.static[:twitter_hashtag]} youtube
+      %p
+        %a{href: "https://www.meetup.com/valencia-devops", title: "Meetup group", target: "_blank"} valencia-devops meetup
+
+    .last
+      %h3= data.static[:partner]
+      %p
+        %a{href: data.static[:partner_url], title: data.static[:partner_url_title], class: "partner ir", target: "_blank"} data.static[:partner_name]

@@ -1,0 +1,51 @@
+// _varables.scss
+
+//// Basic Colors
+
+    $white: #fff;
+
+    $gray: #53585e; /* text */
+    $gray_light: #f5f5f5; /* background */
+    $gray_lighter: rgba(161, 161, 161, 0.5);
+
+    $orange: rgb(230, 126, 34);
+    $orange_light: rgb(243, 156, 18);
+    $orange_dark: rgba(211, 84, 0, 0.5);
+    $orange_darker: rgb(220, 105, 17);
+
+    $blue: #1ea0ce;
+    $blue_light: #339ACC;
+    $blue_dark:#1985ab;
+  //// Background Colors
+
+    $background_color_body: $gray_light;
+    $background_color_header: $blue;
+    $background_color_button: $blue_light;
+    $background_color_button_hover: $blue_dark;
+
+    $shadow_color_header: $gray_lighter;
+    $shadow_color_article: $gray_lighter;
+
+    $border_color_article: $white;
+
+
+  //// Text Colors
+
+    $text_body_color: $gray;
+    $text_header_color: $white;
+    $text_heading_color: $blue;
+    $text_link_color: $blue_light;
+    $text_link_hover_color: $blue_light;
+    $text_selection_color: $white;
+    $text_selection_background: $blue;
+
+    $text_button_color: $white;
+    $text_button_background: $blue;
+    $text_button_hover_background: $orange_darker;
+
+/// General Variables
+
+$font_family: 'Rambla', sans-serif;
+
+
+

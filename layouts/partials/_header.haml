@@ -1,0 +1,18 @@
+%header
+  %hgroup
+    %h1
+      %a{href: "/", title: data.static[:h1_title]} #{data.static[:h1_logo_text]}
+      %span= data.static[:h1_logo_subtext]
+
+    %h2
+      = data.static[:h2_scream_line_1]
+      %span= data.static[:h2_scream_line_2]
+      %span= data.static[:h2_scream_line_3]
+
+    %nav
+      %ul
+        %li
+          %a{href: "/event.html", title: data.static[:nav_page_1_title], class: is_page_selected("/event")} #{data.static[:nav_page_1]}
+        %li
+          %a{href: "/past.html", title: data.static[:nav_page_2_title], class: is_page_selected("/past")} #{data.static[:nav_page_2]}
+

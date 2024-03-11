@@ -1,0 +1,54 @@
+---
+title: A meetup for the new wave of Developers and Sysadmins
+---
+- active = data.static[:ready]
+
+- if active
+  - homepage = data.new[:meetup]
+- else
+  - homepage = data.default[:meetup]
+
+- type = homepage[:type]
+
+%main{:role => "main"}
+  %p.main_paragraph
+    = data.static[:main_paragraph_text_1]
+    %a{href: data.static[:partner_url], :title => data.static[:partner_url_title], :target => "_blank"} #{data.static[:partner_name]}
+    = data.static[:main_paragraph_text_2]
+    %a{href: "event.html" } #{data.static[:main_paragraph_link_text]}
+
+  %h2.title
+    - if active
+      - date = homepage.date
+      = data.static[:next_meetup]
+      %time
+        = data.static[:week_day]
+        #{date}
+        = data.static[:day_hour]
+    - else
+      = 'Únete a nuestra comunidad en '
+      %a{href: data.static[:meetup_url], target: '_blank' } meetup
+
+  %section{:class => "#{type}"}
+
+    - homepage[:talks].each do |f|
+      %article
+        %h3= f[:title]
+        - f[:text].each do |t|
+          %p!= t
+        - if active
+          - f[:author].each do |t|
+            %p
+              = t[:name]
+              = twitter_url(t[:twitter])
+              = t[:bio]
+
+    - if homepage[:sponsor]
+      %div
+        %h3= data.static[:sponsor]
+        %a{href: homepage.sponsor[:url], title: homepage.sponsor[:name], target: "_blank"} image_tag("sponsors/"+homepage.sponsor[:image])
+
+    - if active
+      .call_to_action
+        %a{href: homepage[:eventbrite], class: "button", target: "_blank"} data.static[:attend_text]
+        %small.caption= data.static[:attend_subtext]
