@@ -9,7 +9,7 @@
     .middle
       %h3= data.static[:follow]
       %p
-        %a{href: data.static[:twitter_url], title: "#{data.static[:twitter_account]} on Twitter", target: "_blank"} #{data.static[:twitter_account]}
+        %a{href: data.static[:twitter_url], title: "#{data.static[:twitter_account]} on Twitter", target: "_blank"} @#{data.static[:twitter_account]}
       %p
         %a{href: "https://twitter.com/search?q=%23#{data.static[:twitter_hashtag]}", title: "Hashtag ##{data.static[:twitter_hashtag]}", target: "_blank"} ##{data.static[:twitter_hashtag]}
       %p
