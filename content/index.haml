@@ -13,7 +13,7 @@ title: A meetup for the new wave of Developers and Sysadmins
 %main{:role => "main"}
   %p.main_paragraph
     = data.static[:main_paragraph_text_1]
-    %a{href: data.static[:partner_url], :title => data.static[:partner_url_title], :target => "_blank"} #{data.static[:partner_name]}
+    %a{href: data.static[:partner_url], title: data.static[:partner_url_title], target: "_blank"} #{data.static[:partner_name]}
     = data.static[:main_paragraph_text_2]
     %a{href: "event.html" } #{data.static[:main_paragraph_link_text]}
 
