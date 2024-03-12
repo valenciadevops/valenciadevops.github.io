@@ -10,7 +10,7 @@ title: A meetup for the new wave of Developers and Sysadmins
 
 - type = homepage[:type]
 
-%main{:role => "main"}
+%main{role: "main"}
   %p.main_paragraph
     = data.static[:main_paragraph_text_1]
     %a{href: data.static[:partner_url], title: data.static[:partner_url_title], target: "_blank"} #{data.static[:partner_name]}
@@ -29,7 +29,7 @@ title: A meetup for the new wave of Developers and Sysadmins
       = 'Únete a nuestra comunidad en '
       %a{href: data.static[:meetup_url], target: '_blank' } meetup
 
-  %section{:class => "#{type}"}
+  %section{class: type}
 
     - homepage[:talks].each do |f|
       %article

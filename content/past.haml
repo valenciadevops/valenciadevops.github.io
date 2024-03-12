@@ -2,7 +2,7 @@
 title: Los eventos anteriores
 ---
 
-%main{:role => "main"}
+%main{role: "main"}
   %h2.title
     %a{href: "https://www.youtube.com/@valenciadevops", target: "_blank"} Eventos anteriores en youtube
 
@@ -16,7 +16,7 @@ title: Los eventos anteriores
       - if m[:hangout_url]
         %a{href: m[:hangout_url], class: "ico hangout", target: "_blank"} #{m[:hangout_url]}
 
-    %section{:class => "#{m[:type]}"}
+    %section{class: m[:type]}
       - m[:talks].each do |f|
         %article
           %h3!= f[:title]
