@@ -207,6 +207,39 @@ a.partner {
     vertical-align: text-top;
 }
 
+.twitter {
+    background: url(/images/ico_twitter.svg) no-repeat center left;
+    background-size: 16px;
+    display: inline-block;
+    padding-left: 20px;
+}
+
+.youtube {
+    background: url(/images/ico_youtube.png) no-repeat top left;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: text-top;
+}
+
+.meetup {
+    background: url(/images/ico_meetup.png) no-repeat top left;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: text-top;
+}
+
+.github {
+    background: url(/images/ico_github.svg) no-repeat center left;
+    background-size: 16px;
+    display: inline-block;
+    margin-left: 5px;
+    padding-left: 20px;
+}
+
 .ico, .ir {
   border: 0;
   font: 0/0 a;

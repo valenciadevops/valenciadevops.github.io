@@ -9,13 +9,15 @@
     .middle
       %h3= data.static[:follow]
       %p
-        %a{href: data.static[:twitter_url], title: "#{data.static[:twitter_account]} on Twitter", target: "_blank"} @#{data.static[:twitter_account]}
+        %a{href: data.static[:twitter_url], title: "#{data.static[:twitter_account]} on Twitter", target: "_blank", class: "twitter" } @#{data.static[:twitter_account]}
       %p
-        %a{href: "https://twitter.com/search?q=%23#{data.static[:twitter_hashtag]}", title: "Hashtag ##{data.static[:twitter_hashtag]}", target: "_blank"} ##{data.static[:twitter_hashtag]}
+        %a{href: "https://x.com/search?q=%23#{data.static[:twitter_hashtag]}", title: "Hashtag ##{data.static[:twitter_hashtag]}", target: "_blank", class: "twitter" } ##{data.static[:twitter_hashtag]}
       %p
         %a{href: "https://www.youtube.com/@#{data.static[:twitter_account]}", title: "Youtube channel", target: "_blank"} #{data.static[:twitter_hashtag]} youtube
       %p
         %a{href: "https://www.meetup.com/valencia-devops", title: "Meetup group", target: "_blank"} valencia-devops meetup
+      %p
+        %a{href: "https://github.com/valenciadevops/valenciadevops.github.io", title: "Github", target: "_blank", class: "github" } Github
 
     .last
       %h3= data.static[:partner]
