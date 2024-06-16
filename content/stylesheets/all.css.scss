@@ -215,28 +215,24 @@ a.partner {
 }
 
 .youtube {
-    background: url(/images/ico_youtube.png) no-repeat top left;
-    width: 30px;
-    height: 30px;
+    background: url(/images/ico_youtube.svg) no-repeat center left;
+    background-size: 16px;
     display: inline-block;
-    margin-left: 5px;
-    vertical-align: text-top;
+    padding-left: 20px;
 }
 
 .meetup {
-    background: url(/images/ico_meetup.png) no-repeat top left;
-    width: 30px;
-    height: 30px;
+    background: url(/images/ico_meetup.svg) no-repeat center left;
+    background-size: 16px;
     display: inline-block;
     margin-left: 5px;
-    vertical-align: text-top;
+    padding-left: 20px;
 }
 
 .github {
     background: url(/images/ico_github.svg) no-repeat center left;
     background-size: 16px;
     display: inline-block;
-    margin-left: 5px;
     padding-left: 20px;
 }
 
