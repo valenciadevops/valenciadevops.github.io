@@ -25,12 +25,12 @@ jobs:
       - name: Setup node
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'
+          node-version: '22.x'
       - name: Setup ruby
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-          ruby-version: '3.3'
+          ruby-version: '3.4'
       - name: Install ruby dependencies
         run: BUNDLE_WITHOUT=development bundle install
       - name: Build site
