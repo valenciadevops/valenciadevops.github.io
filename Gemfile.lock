@@ -19,17 +19,13 @@ GEM
     cri (2.15.12)
     ddmetrics (1.1.0)
     ddplugin (1.0.3)
-    diff-lcs (1.6.0)
+    diff-lcs (1.6.1)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
-    ffi (1.17.1-arm64-darwin)
-    ffi (1.17.1-x86_64-linux-gnu)
-    google-protobuf (4.30.0-arm64-darwin)
-      bigdecimal
-      rake (>= 13)
-    google-protobuf (4.30.0-x86_64-linux)
+    ffi (1.17.2-x86_64-linux-gnu)
+    google-protobuf (4.30.2-x86_64-linux)
       bigdecimal
       rake (>= 13)
     haml (6.3.0)
@@ -83,14 +79,14 @@ GEM
       nanoc-checking (~> 1.0)
       nanoc-cli (~> 4.11, >= 4.11.15)
       nanoc-core (~> 4.11, >= 4.11.15)
-    parallel (1.26.3)
+    parallel (1.27.0)
     pastel (0.8.0)
       tty-color (~> 0.5)
     pry (0.15.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
     public_suffix (6.0.1)
-    rack (3.1.11)
+    rack (3.1.13)
     rackup (2.2.1)
       rack (>= 3)
     rainpress (1.0.1)
@@ -99,10 +95,8 @@ GEM
     rb-inotify (0.11.1)
       ffi (~> 1.0)
     rbtree (0.4.6)
-    sass-embedded (1.85.1-arm64-darwin)
-      google-protobuf (~> 4.29)
-    sass-embedded (1.85.1-x86_64-linux-gnu)
-      google-protobuf (~> 4.29)
+    sass-embedded (1.86.3-x86_64-linux-gnu)
+      google-protobuf (~> 4.30)
     set (1.1.1)
     slow_enumerator_tools (1.1.0)
     sorted_set (1.0.3)
@@ -120,7 +114,6 @@ GEM
     zeitwerk (2.7.2)
 
 PLATFORMS
-  arm64-darwin-23
   x86_64-linux
 
 DEPENDENCIES
@@ -133,4 +126,4 @@ DEPENDENCIES
   webrick (~> 1.8)
 
 BUNDLED WITH
-   2.6.3
+   2.6.7
