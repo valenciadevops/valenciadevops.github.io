@@ -31,7 +31,7 @@ compile "/**/*.haml" do
   write item.identifier.without_ext + ".html"
 end
 
-require 'nanoc/dart_sass'
+require "nanoc/dart_sass"
 
 compile "/**/stylesheets/*.scss" do
   next if /^_/.match?(item.identifier.to_s.split("/").last) # pass partials nested in folders
