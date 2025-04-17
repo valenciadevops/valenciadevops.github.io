@@ -7,16 +7,30 @@ def is_page_selected(page)
 end
 
 class YamlData
+  include Singleton
+
+  def initialize
+    @datas = {}
+  end
+
+  def filename(name)
+    File.join(File.expand_path("..", __dir__), "data", "#{name}.yml")
+  end
+
   def method_missing(method_name, *arguments, &block)
-    YAML.safe_load_file(File.join(File.expand_path("..", __dir__), "data", "#{method_name}.yml"), symbolize_names: true)
+    @datas.fetch(method_name) do
+      filename = filename(method_name)
+      @datas[method_name] = YAML.safe_load_file(filename, symbolize_names: true)
+    end
   end
 
   def respond_to_missing?(method_name, include_private = false)
-    File.exist?(File.join(File.expand_path("..", __dir__), "data", "#{method_name}.yml")) || super
+    filename = filename(method_name)
+    File.exist?(filename) || super
     true
   end
 end
 
 def data
-  YamlData.new
+  YamlData.instance
 end
