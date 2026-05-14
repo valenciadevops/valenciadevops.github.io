@@ -11,13 +11,13 @@
       %p
         %a{href: data.static[:twitter_url], title: "#{data.static[:twitter_account]} on Twitter", target: "_blank", alt: "twitter", class: "twitter" } @#{data.static[:twitter_account]}
       %p
-        %a{href: "https://x.com/search?q=%23#{data.static[:twitter_hashtag]}", title: "Hashtag ##{data.static[:twitter_hashtag]}", target: "_blank", alt: "twitter", class: "twitter" } ##{data.static[:twitter_hashtag]}
+        %a{href: "#{data.static[:hashtag_url]}#{data.static[:twitter_hashtag]}", title: "Hashtag ##{data.static[:twitter_hashtag]}", target: "_blank", alt: "twitter", class: "twitter" } ##{data.static[:twitter_hashtag]}
       %p
-        %a{href: "https://www.youtube.com/@#{data.static[:twitter_account]}", title: "Youtube channel", target: "_blank", class: "youtube" } #{data.static[:twitter_hashtag]}
+        %a{href: data.static[:youtube_channel_url], title: "Youtube channel", target: "_blank", class: "youtube" } #{data.static[:twitter_hashtag]}
       %p
-        %a{href: "https://www.meetup.com/valencia-devops", title: "Meetup group", target: "_blank", alt: "meetup", class: "meetup" } valencia-devops
+        %a{href: data.static[:meetup_url], title: "Meetup group", target: "_blank", alt: "meetup", class: "meetup" } valencia-devops
       %p
-        %a{href: "https://github.com/valenciadevops/valenciadevops.github.io", title: "Github", target: "_blank", alt: "GitHub", class: "github" } Github
+        %a{href: data.static[:github_repo_url], title: "Github", target: "_blank", alt: "GitHub", class: "github" } Github
 
     .last
       %h3= data.static[:partner]

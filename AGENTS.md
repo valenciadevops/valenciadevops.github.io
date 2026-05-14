@@ -84,6 +84,14 @@ participate: "Participa"
 twitter_account: "valenciadevops"
 # ...
 
+# Site (used in templates — do not hardcode these values)
+site_url: "https://valenciadevops.github.io"
+google_analytics_id: "G-C02YHY1S14"
+google_site_verification: "Ag5B31..."
+youtube_channel_url: "https://www.youtube.com/@valenciadevops"
+hashtag_url: "https://x.com/search?q=%23"
+github_repo_url: "https://github.com/valenciadevops/valenciadevops.github.io"
+
 # Index page
 ready: false  # Toggles between "next meetup" and "join community" modes
 main_paragraph_text_1: "..."

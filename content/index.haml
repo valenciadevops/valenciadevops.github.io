@@ -40,7 +40,8 @@ title: A meetup for the new wave of Developers and Sysadmins
           - f[:author].each do |t|
             %p
               = t[:name]
-              = twitter_url(t[:twitter])
+              - if t[:twitter]
+                %a{href: "https://x.com/#{t[:twitter]}", target: "_blank"} @#{t[:twitter]}
               = t[:bio]
 
     - if homepage[:sponsor]

@@ -8,25 +8,28 @@
     %meta{content: "DevOps Valencia es una reunión mensual centrada en temas de operaciones, automatizacion y desarrollo", name: "description"}/
     %meta{content: "Devops Valencia crew", name: "author"}/
     %meta{content: "width=device-width", name: "viewport"}/
-    %meta{content: "https://valenciadevops.github.io/", property: "og:url"}/
+    %meta{content: "#{data.static[:site_url]}/", property: "og:url"}/
     %meta{content: "DevOps Valencia: a meetup for Devops and Sysadmins.", property: "og:title"}/
-    %meta{content: "https://valenciadevops.github.io/images/logo.png", property: "og:image"}/
+    %meta{content: "#{data.static[:site_url]}/images/logo.png", property: "og:image"}/
     %meta{content: "DevOps Valencia es una reunión mensual centrada en temas de operaciones, automatizacion y desarrollo", property: "og:description"}/
-    %meta{content: "Ag5B31-hDBKjiLo7nGmGfmLoA3LuDai3pZYTqNAUm0g", name: "google-site-verification" }/
+    %meta{content: data.static[:google_site_verification], name: "google-site-verification" }/
+    %meta{content: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'", "http-equiv": "Content-Security-Policy"}/
+    %meta{content: "strict-origin-when-cross-origin", "http-equiv": "Referrer-Policy"}/
+    %link{rel: "icon", href: "/favicon.ico", sizes: "any"}/
     %link{rel: "preload", as: "font", href: "/fonts/rambla-v4-latin-regular.woff", type: "font/woff", crossorigin: true}
     %link{rel: "preload", as: "font", href: "/fonts/rambla-v4-latin-regular.woff2", type: "font/woff2", crossorigin: true}
     %link{rel: "stylesheet", type: "text/css", href: "/stylesheets/all.css", media: "screen"}
     %script{
       "type": "text/javascript",
       "async": true,
-      "src": "https://www.googletagmanager.com/gtag/js?id=G-C02YHY1S14"
+      "src": "https://www.googletagmanager.com/gtag/js?id=#{data.static[:google_analytics_id]}"
     }
     :javascript
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-C02YHY1S14');
+      gtag('config', '#{data.static[:google_analytics_id]}');
   %body
     != render '/partials/_header.*'
     != yield
