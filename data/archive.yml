@@ -211,7 +211,7 @@ meetups:
   - meetup:
     date: "18 de Febrero de 2014"
     hangout_url: "https://www.youtube.com/watch?v=OBgCBkP8QWA"
-    type: double
+    type: "double"
     talks:
     - title: "Empezando con Docker"
       text:

@@ -10,7 +10,6 @@ title: Los eventos anteriores
 
   - data.archive[:meetups].each do |m|
     %h2.section_title
-      <!-- = data.static[:week_day] -->
       = m[:date]
 
       - if m[:hangout_url]
@@ -23,8 +22,8 @@ title: Los eventos anteriores
           - f[:author].each do |t|
             %p
               = t[:name]
-              - twitter_handle = t[:twitter] ? "@#{t[:twitter]}" : ""
-              %a{href: "https://x.com/#{t[:twitter]}", target: "_blank"} #{twitter_handle}
+              - if t[:twitter]
+                %a{href: "https://x.com/#{t[:twitter]}", target: "_blank"} @#{t[:twitter]}
 
           - f[:text].each do |t|
             %p= t
@@ -37,4 +36,4 @@ title: Los eventos anteriores
       - if m[:sponsor]
         %div
           %h3= data.static[:sponsor]
-          %a{href: m[:sponsor][:url], title: n[:sponsor][:name], target: "_blank"} image_tag("sponsors/"+m[:sponsor][:image])
+          %a{href: m[:sponsor][:url], title: m[:sponsor][:name], target: "_blank"} image_tag("sponsors/"+m[:sponsor][:image])

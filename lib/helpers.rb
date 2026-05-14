@@ -27,7 +27,6 @@ class YamlData
   def respond_to_missing?(method_name, include_private = false)
     filename = filename(method_name)
     File.exist?(filename) || super
-    true
   end
 end
 
