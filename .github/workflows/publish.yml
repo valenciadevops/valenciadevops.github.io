@@ -26,7 +26,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true
-          ruby-version: '3.4'
+          ruby-version: '4.0'
       - name: Install ruby dependencies
         run: BUNDLE_WITHOUT=development bundle install
       - name: Build site
