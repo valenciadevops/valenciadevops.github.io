@@ -13,23 +13,12 @@
     %meta{content: "#{data.static[:site_url]}/images/logo.png", property: "og:image"}/
     %meta{content: data.static[:meta_description], property: "og:description"}/
     %meta{content: data.static[:google_site_verification], name: "google-site-verification" }/
-    %meta{content: "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-src 'none'; object-src 'none'; base-uri 'self'", "http-equiv": "Content-Security-Policy"}/
+    %meta{content: "default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'", "http-equiv": "Content-Security-Policy"}/
     %meta{content: "strict-origin-when-cross-origin", "http-equiv": "Referrer-Policy"}/
     %link{rel: "icon", href: "/favicon.ico", sizes: "any"}/
     %link{rel: "preload", as: "font", href: "/fonts/rambla-v4-latin-regular.woff", type: "font/woff", crossorigin: true}
     %link{rel: "preload", as: "font", href: "/fonts/rambla-v4-latin-regular.woff2", type: "font/woff2", crossorigin: true}
     %link{rel: "stylesheet", type: "text/css", href: "/stylesheets/all.css", media: "screen"}
-    %script{
-      "type": "text/javascript",
-      "async": true,
-      "src": "https://www.googletagmanager.com/gtag/js?id=#{data.static[:google_analytics_id]}"
-    }
-    :javascript
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', '#{data.static[:google_analytics_id]}');
   %body
     != render '/partials/_header.*'
     != yield
