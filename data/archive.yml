@@ -82,7 +82,6 @@ meetups:
     date: "14 de Diciembre de 2016"
     hangout_url: "https://youtu.be/kzW-PnrKPCA"
     type: "simple"
-    eventbrite: ""
     talks:
     - title: "The state of the (cloud native application) industry and what VMware is doing in the space"
       text:

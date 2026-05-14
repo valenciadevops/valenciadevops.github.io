@@ -94,6 +94,7 @@ github_repo_url: "https://github.com/valenciadevops/valenciadevops.github.io"
 
 # Index page
 ready: false  # Toggles between "next meetup" and "join community" modes
+meta_description: "DevOps Valencia es..."  # Used in meta + og:description tags
 main_paragraph_text_1: "..."
 # ...
 

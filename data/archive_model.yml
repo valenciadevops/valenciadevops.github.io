@@ -1,18 +1,9 @@
   - meetup:
     date: ""
-    hangout_url: false
-    type: double
+    hangout_url: ""
+    type: "simple"
+    eventbrite: ""
     talks:
-    - title: ""
-      text:
-        - ""
-      links:
-      - url: ""
-        label: "slides &raquo;"
-      author:
-      - name: ""
-        twitter: ""
-        bio: ""
     - title: ""
       text:
         - ""
@@ -27,5 +18,3 @@
       name: ""
       url: ""
       image: ""
-
-
