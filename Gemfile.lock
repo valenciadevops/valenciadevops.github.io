@@ -27,7 +27,7 @@ GEM
     google-protobuf (4.34.1-x86_64-linux-gnu)
       bigdecimal
       rake (~> 13.3)
-    haml (6.4.0)
+    haml (7.2.0)
       temple (>= 0.8.2)
       thor
       tilt
@@ -120,13 +120,13 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  adsf (~> 1.4)
+  adsf (~> 1.5)
   adsf-live
-  haml (~> 6.3)
-  nanoc (~> 4.12)
+  haml (~> 7.2)
+  nanoc (~> 4.14)
   nanoc-dart-sass
   rainpress (~> 1.0)
-  webrick (~> 1.8)
+  webrick (~> 1.9)
 
 BUNDLED WITH
    2.6.7

@@ -2,13 +2,13 @@
 
 source "https://rubygems.org"
 
-gem "adsf", "~> 1.4"
+gem "adsf", "~> 1.5"
 gem "adsf-live"
-gem "haml", "~> 6.3"
-gem "nanoc", "~> 4.12"
+gem "haml", "~> 7.2"
+gem "nanoc", "~> 4.14"
 gem "rainpress", "~> 1.0"
 gem "nanoc-dart-sass"
 
 group :development do
-  gem "webrick", "~> 1.8"
+  gem "webrick", "~> 1.9"
 end

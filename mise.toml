@@ -1,0 +1,34 @@
+[tools]
+ruby = "3.4"
+
+[env]
+BUNDLE_PATH = ".bundle"
+
+[tasks.build]
+description = "Build the site to output/"
+run = "bundle exec nanoc"
+
+[tasks.serve]
+description = "Start the development server with live reload (http://localhost:3000)"
+run = "bundle exec nanoc view"
+
+[tasks.clean]
+description = "Remove the generated output/ directory"
+run = "rm -rf output/"
+
+[tasks.install]
+description = "Install Ruby gem dependencies"
+run = "bundle install"
+
+[tasks.rebuild]
+description = "Clean and rebuild the site from scratch"
+depends = ["clean", "build"]
+
+[tasks.doctor]
+description = "Check development environment health"
+run = """
+echo "=== Ruby ===" && ruby --version
+echo "=== Bundler ===" && bundle --version
+echo "=== Nanoc ===" && bundle exec nanoc --version
+echo "=== Gems ===" && bundle list | grep -E '(nanoc|haml|sass)'
+"""
