@@ -158,13 +158,12 @@ main {
     padding: 5px 12px;
     letter-spacing: 1px;
     display: inline-block;
-    letter-spacing: 1px;
     background-color: variables.$text_button_background;
     @include mixins.rounded(5px);
 
     &:hover {
       color: variables.$text_button_color;
-      background-color: variables.$text_button_background;;
+      background-color: variables.$text_button_hover_background;
       text-decoration: none;
     }
   }
@@ -333,23 +332,10 @@ a.partner {
         margin: 0 2% 30px;
         p { font-size: 18px; }
       } // article
-
-      &.double {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: center;
-
-      article {
-        flex-grow: 1;
-        flex-basis: 0;
-      }
-
-      div { flex: 1 100%; }
-      } // section.double
     } // section
   } // main
 
-} // @media min-width: 1024px
+} // @media min-width: 896px
 
 @media only screen and (min-width: 1024px) {
 
