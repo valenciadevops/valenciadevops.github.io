@@ -36,4 +36,4 @@ title: Los eventos anteriores
       - if m[:sponsor]
         %div
           %h3= data.static[:sponsor]
-          %a{href: m[:sponsor][:url], title: m[:sponsor][:name], target: "_blank"} image_tag("sponsors/"+m[:sponsor][:image])
+          %a{href: m[:sponsor][:url], title: m[:sponsor][:name], target: "_blank"}= image_tag("sponsors/"+m[:sponsor][:image])

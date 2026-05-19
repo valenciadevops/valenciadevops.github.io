@@ -1,5 +1,5 @@
 !!!
-%html{lang: "en"}
+%html{lang: "es"}
   %head
     %meta{charset: "utf-8"}/
     %meta{content: "IE=edge,chrome=1", "http-equiv": "X-UA-Compatible"}/
@@ -9,7 +9,7 @@
     %meta{content: "Devops Valencia crew", name: "author"}/
     %meta{content: "width=device-width", name: "viewport"}/
     %meta{content: "#{data.static[:site_url]}/", property: "og:url"}/
-    %meta{content: "DevOps Valencia: a meetup for Devops and Sysadmins.", property: "og:title"}/
+    %meta{content: data.static[:h1_title], property: "og:title"}/
     %meta{content: "#{data.static[:site_url]}/images/logo.png", property: "og:image"}/
     %meta{content: data.static[:meta_description], property: "og:description"}/
     %meta{content: data.static[:google_site_verification], name: "google-site-verification" }/

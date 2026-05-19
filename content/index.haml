@@ -47,9 +47,9 @@ title: A meetup for the new wave of Developers and Sysadmins
     - if homepage[:sponsor]
       %div
         %h3= data.static[:sponsor]
-        %a{href: homepage[:sponsor][:url], title: homepage[:sponsor][:name], target: "_blank"} image_tag("sponsors/"+homepage[:sponsor][:image])
+        %a{href: homepage[:sponsor][:url], title: homepage[:sponsor][:name], target: "_blank"}= image_tag("sponsors/"+homepage[:sponsor][:image])
 
     - if active
       .call_to_action
-        %a{href: homepage[:eventbrite], class: "button", target: "_blank"} data.static[:attend_text]
+        %a{href: homepage[:eventbrite], class: "button", target: "_blank"}= data.static[:attend_text]
         %small.caption= data.static[:attend_subtext]

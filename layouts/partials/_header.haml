@@ -1,7 +1,7 @@
 %header
   %hgroup
     %h1
-      %a{href: "/", title: data.static[:h1_title]} #{data.static[:h1_logo_text]}
+      %a{href: "/", title: data.static[:h1_title], class: is_page_selected("/")} #{data.static[:h1_logo_text]}
       %span= data.static[:h1_logo_subtext]
 
     %h2

@@ -19,3 +19,9 @@
 /output
 /.tool-versions
 /crash.log
+
+# Ignore tool artifacts
+/.crush/
+
+# Ignore transient meetup data (created when ready: true in static.yml)
+/data/new.yml

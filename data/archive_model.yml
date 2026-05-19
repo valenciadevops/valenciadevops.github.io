@@ -1,5 +1,4 @@
-  - meetup:
-    date: ""
+  - date: ""
     hangout_url: ""
     type: "simple"
     eventbrite: ""
